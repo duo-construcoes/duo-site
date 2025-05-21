@@ -8,7 +8,7 @@ function carregarDadosCSV(url, callback) {
   });
 }
 
-// Equipe
+// SEÇÃO EQUIPE
 carregarDadosCSV('https://docs.google.com/spreadsheets/d/e/2PACX-1vTyLVBo6EOkYUWTy_ez3B6P_oJm4otkxIWb7lsur-_YTavztd-5ouLEKQ6at1a2OtsyHBHzlBTk1KpX/pub?gid=1742586084&single=true&output=csv', function(data) {
   const container = document.getElementById('equipe-content');
   container.innerHTML = '';
@@ -31,7 +31,7 @@ carregarDadosCSV('https://docs.google.com/spreadsheets/d/e/2PACX-1vTyLVBo6EOkYUW
   });
 });
 
-// Obras em andamento
+// SEÇÃO OBRAS EM ANDAMENTO
 carregarDadosCSV('https://docs.google.com/spreadsheets/d/e/2PACX-1vTyLVBo6EOkYUWTy_ez3B6P_oJm4otkxIWb7lsur-_YTavztd-5ouLEKQ6at1a2OtsyHBHzlBTk1KpX/pub?gid=1482567846&single=true&output=csv', function(data) {
   const container = document.getElementById('obras-andamento-content');
   container.innerHTML = '';
@@ -43,8 +43,8 @@ carregarDadosCSV('https://docs.google.com/spreadsheets/d/e/2PACX-1vTyLVBo6EOkYUW
         <img src="${obra['URL da Imagem']}" alt="${obra['Nome da Obra']}">
         <div>
           <h4>${obra['Nome da Obra']}</h4>
-          <p>Área: ${obra['Ãrea ConstruÃ­da (mÂ²)']} m²</p>
-          <p>Local: ${obra['LocalizaÃ§Ã£o']}</p>
+          <p>Área: ${obra['Área Construída']} m²</p>
+          <p>Local: ${obra['Localização']}</p>
         </div>
       `;
       container.appendChild(card);
@@ -52,7 +52,7 @@ carregarDadosCSV('https://docs.google.com/spreadsheets/d/e/2PACX-1vTyLVBo6EOkYUW
   });
 });
 
-// Obras concluídas
+// SEÇÃO OBRAS CONCLUÍDAS
 carregarDadosCSV('https://docs.google.com/spreadsheets/d/e/2PACX-1vTyLVBo6EOkYUWTy_ez3B6P_oJm4otkxIWb7lsur-_YTavztd-5ouLEKQ6at1a2OtsyHBHzlBTk1KpX/pub?gid=1611364421&single=true&output=csv', function(data) {
   const container = document.getElementById('obras-concluidas-content');
   container.innerHTML = '';
@@ -64,8 +64,8 @@ carregarDadosCSV('https://docs.google.com/spreadsheets/d/e/2PACX-1vTyLVBo6EOkYUW
         <img src="${obra['URL da Imagem']}" alt="${obra['Nome da Obra']}">
         <div>
           <h4>${obra['Nome da Obra']}</h4>
-          <p>Área: ${obra['Ãrea ConstruÃ­da (mÂ²)']} m²</p>
-          <p>Local: ${obra['LocalizaÃ§Ã£o']}</p>
+          <p>Área: ${obra['Área Construída']} m²</p>
+          <p>Local: ${obra['Localização']}</p>
         </div>
       `;
       container.appendChild(card);
